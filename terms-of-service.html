@@ -6,7 +6,7 @@
 <title>Tile Rush - Terms of Service</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Arial, sans-serif; background: #080C18; color: #E2E8F0; min-height: 100vh; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #080C18; color: #E2E8F0; min-height: 100vh; visibility: hidden; }
   .header { background: linear-gradient(135deg, #6366F1, #EC4899); padding: 40px 20px; text-align: center; }
   .logo { font-size: 42px; font-weight: 900; color: white; letter-spacing: 4px; text-shadow: 0 0 30px rgba(99,102,241,0.8); }
   .subtitle { color: rgba(255,255,255,0.8); font-size: 14px; margin-top: 8px; letter-spacing: 2px; }
@@ -19,98 +19,96 @@
   .card h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: linear-gradient(#6366F1, #EC4899); border-radius: 2px; }
   .card p { color: #94A3B8; line-height: 1.8; font-size: 14px; }
   .date { text-align: center; color: #475569; font-size: 12px; margin-bottom: 30px; letter-spacing: 1px; }
-  .contact-card { background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(99,102,241,0.05)); border: 1px solid rgba(236,72,153,0.3); border-radius: 16px; padding: 30px; text-align: center; }
-  .contact-card h2 { color: #EC4899; margin-bottom: 10px; }
+  .contact-card { background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(99,102,241,0.05)); border: 1px solid rgba(236,72,153,0.3); border-radius: 16px; padding: 30px; text-align: center; margin-bottom: 20px; }
+  .contact-card h2 { color: #EC4899; margin-bottom: 10px; font-size: 16px; }
+  .contact-card p { color: #94A3B8; margin-bottom: 10px; font-size: 14px; }
   .contact-card a { color: #F472B6; text-decoration: none; font-size: 15px; }
   .footer { text-align: center; padding: 30px; color: #475569; font-size: 12px; border-top: 1px solid #1E293B; margin-top: 20px; }
-  .nav { text-align: center; margin-top: 30px; }
+  .nav { text-align: center; margin-top: 10px; margin-bottom: 30px; }
   .nav a { color: #EC4899; text-decoration: none; font-size: 13px; border: 1px solid rgba(236,72,153,0.4); padding: 8px 20px; border-radius: 20px; margin: 0 8px; }
-  [data-en], [data-tr] { display: none; }
 </style>
 </head>
 <body>
 <div class="header">
   <div class="logo">🧩 TILE RUSH</div>
-  <div class="subtitle" data-en>TERMS OF SERVICE</div>
-  <div class="subtitle" data-tr>KULLANIM KOŞULLARI</div>
+  <div class="subtitle" id="subtitle"></div>
   <div class="lang-switch">
-    <button class="lang-btn active" onclick="setLang('en')">EN</button>
-    <button class="lang-btn" onclick="setLang('tr')">TR</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" id="btn-tr" onclick="setLang('tr')">TR</button>
   </div>
 </div>
 
 <div class="container">
   <p class="date">Last updated / Son güncelleme: May 30, 2026</p>
 
-  <div class="card">
-    <h2 data-en>Acceptance of Terms</h2>
-    <h2 data-tr>Koşulların Kabulü</h2>
-    <p data-en>By downloading or playing Tile Rush, you agree to these terms of service. If you do not agree, please do not use the game.</p>
-    <p data-tr>Tile Rush'ı indirerek veya oynayarak bu kullanım koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız lütfen oyunu kullanmayın.</p>
-  </div>
-
-  <div class="card">
-    <h2 data-en>Game Usage</h2>
-    <h2 data-tr>Oyun Kullanımı</h2>
-    <p data-en>Tile Rush is provided for personal, non-commercial entertainment purposes only. You may not copy, modify, reverse engineer, or distribute the game without prior written permission.</p>
-    <p data-tr>Tile Rush yalnızca kişisel, ticari olmayan eğlence amaçlı sunulmaktadır. Önceden yazılı izin almadan oyunu kopyalayamaz, değiştiremez, tersine mühendislik uygulayamaz veya dağıtamazsınız.</p>
-  </div>
-
-  <div class="card">
-    <h2 data-en>In-App Purchases</h2>
-    <h2 data-tr>Uygulama İçi Satın Almalar</h2>
-    <p data-en>Tile Rush offers optional in-app purchases. All purchases are processed through Google Play and are subject to Google Play's refund policy. Virtual items have no real-world value.</p>
-    <p data-tr>Tile Rush isteğe bağlı uygulama içi satın almalar sunar. Tüm satın almalar Google Play üzerinden işlenir ve Google Play'in iade politikasına tabidir. Sanal öğelerin gerçek dünya değeri yoktur.</p>
-  </div>
-
-  <div class="card">
-    <h2 data-en>Advertisements</h2>
-    <h2 data-tr>Reklamlar</h2>
-    <p data-en>The free version of Tile Rush displays advertisements provided by Google AdMob. By using the free version, you consent to the display of ads.</p>
-    <p data-tr>Tile Rush'ın ücretsiz sürümü Google AdMob tarafından sağlanan reklamlar gösterir. Ücretsiz sürümü kullanarak reklam gösterimine onay vermiş olursunuz.</p>
-  </div>
-
-  <div class="card">
-    <h2 data-en>Limitation of Liability</h2>
-    <h2 data-tr>Sorumluluk Sınırlaması</h2>
-    <p data-en>Tile Rush is provided "as is" without warranties of any kind. We are not liable for any damages arising from the use of the game.</p>
-    <p data-tr>Tile Rush herhangi bir garanti verilmeksizin "olduğu gibi" sunulmaktadır. Oyunun kullanımından kaynaklanan herhangi bir zarardan sorumlu değiliz.</p>
-  </div>
-
-  <div class="card">
-    <h2 data-en>Changes to Terms</h2>
-    <h2 data-tr>Koşullardaki Değişiklikler</h2>
-    <p data-en>We reserve the right to update these terms at any time. Continued use of the game after changes constitutes acceptance of the updated terms.</p>
-    <p data-tr>Bu koşulları istediğimiz zaman güncelleme hakkını saklı tutarız. Değişikliklerden sonra oyunu kullanmaya devam etmek güncellenmiş koşulların kabulü anlamına gelir.</p>
-  </div>
+  <div class="card"><h2 id="c1-title"></h2><p id="c1-text"></p></div>
+  <div class="card"><h2 id="c2-title"></h2><p id="c2-text"></p></div>
+  <div class="card"><h2 id="c3-title"></h2><p id="c3-text"></p></div>
+  <div class="card"><h2 id="c4-title"></h2><p id="c4-text"></p></div>
+  <div class="card"><h2 id="c5-title"></h2><p id="c5-text"></p></div>
+  <div class="card"><h2 id="c6-title"></h2><p id="c6-text"></p></div>
 
   <div class="contact-card">
-    <h2 data-en>Contact Us</h2>
-    <h2 data-tr>İletişim</h2>
-    <p style="color:#94A3B8; margin-bottom:10px; font-size:14px;" data-en>Questions about these terms?</p>
-    <p style="color:#94A3B8; margin-bottom:10px; font-size:14px;" data-tr>Koşullar hakkında sorularınız mı var?</p>
+    <h2 id="contact-title"></h2>
+    <p id="contact-text"></p>
     <a href="mailto:sadiksiyak@gmail.com">sadiksiyak@gmail.com</a>
   </div>
 
   <div class="nav">
-    <a href="privacy-policy.html" data-en>← Privacy Policy</a>
-    <a href="privacy-policy.html" data-tr>← Gizlilik Politikası</a>
-    <a href="index.html" data-en>Home →</a>
-    <a href="index.html" data-tr>Ana Sayfa →</a>
+    <a href="privacy-policy.html" id="nav-privacy"></a>
+    <a href="index.html" id="nav-home"></a>
   </div>
 </div>
 
 <div class="footer">© 2026 TILE RUSH · DEVBYSADIK · ALL RIGHTS RESERVED</div>
 
 <script>
-  function setLang(lang) {
-    document.querySelectorAll('[data-en]').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
-    document.querySelectorAll('[data-tr]').forEach(el => el.style.display = lang === 'tr' ? '' : 'none');
-    document.querySelectorAll('.lang-btn').forEach((btn, i) => btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'tr')));
-    localStorage.setItem('lang', lang);
+const content = {
+  en: {
+    subtitle: 'TERMS OF SERVICE',
+    c1: { title: 'Acceptance of Terms', text: 'By downloading or playing Tile Rush, you agree to these terms of service. If you do not agree with any part of these terms, please do not download or use the game.' },
+    c2: { title: 'Game Usage', text: 'Tile Rush is provided for personal, non-commercial entertainment purposes only. You may not copy, modify, reverse engineer, decompile, or distribute the game or any of its content without prior written permission from the developer.' },
+    c3: { title: 'In-App Purchases', text: 'Tile Rush offers optional in-app purchases including virtual coins and premium features. All purchases are processed through Google Play and are subject to Google Play\'s refund policy. Virtual items have no real-world monetary value and cannot be transferred, exchanged, or refunded outside of Google Play\'s policies.' },
+    c4: { title: 'Advertisements', text: 'The free version of Tile Rush displays advertisements provided by Google AdMob. By using the free version, you consent to the display of personalized or non-personalized ads. You may remove ads through an in-app purchase.' },
+    c5: { title: 'Limitation of Liability', text: 'Tile Rush is provided "as is" without warranties of any kind, express or implied. The developer is not liable for any direct, indirect, incidental, or consequential damages arising from your use or inability to use the game, including data loss or device issues.' },
+    c6: { title: 'Changes to Terms', text: 'We reserve the right to update or modify these terms at any time without prior notice. We will notify users of significant changes through the app or our website. Your continued use of Tile Rush after any changes constitutes your acceptance of the new terms.' },
+    contact: { title: 'Contact Us', text: 'Questions or concerns about these terms?' },
+    navPrivacy: '← Privacy Policy',
+    navHome: 'Home →'
+  },
+  tr: {
+    subtitle: 'KULLANIM KOŞULLARI',
+    c1: { title: 'Koşulların Kabulü', text: 'Tile Rush\'ı indirerek veya oynayarak bu kullanım koşullarını kabul etmiş olursunuz. Bu koşulların herhangi bir bölümüne katılmıyorsanız lütfen oyunu indirmeyin veya kullanmayın.' },
+    c2: { title: 'Oyun Kullanımı', text: 'Tile Rush yalnızca kişisel, ticari olmayan eğlence amaçlı sunulmaktadır. Geliştiriciden önceden yazılı izin almadan oyunu veya içeriklerini kopyalayamaz, değiştiremez, tersine mühendislik uygulayamaz, kaynak koda dönüştüremez veya dağıtamazsınız.' },
+    c3: { title: 'Uygulama İçi Satın Almalar', text: 'Tile Rush sanal para ve premium özellikler dahil isteğe bağlı uygulama içi satın almalar sunar. Tüm satın almalar Google Play üzerinden işlenir ve Google Play\'in iade politikasına tabidir. Sanal öğelerin gerçek para değeri yoktur ve Google Play politikaları dışında transfer edilemez veya iade edilemez.' },
+    c4: { title: 'Reklamlar', text: 'Tile Rush\'ın ücretsiz sürümü Google AdMob tarafından sağlanan reklamlar gösterir. Ücretsiz sürümü kullanarak kişiselleştirilmiş veya kişiselleştirilmemiş reklam gösterimine onay vermiş olursunuz. Uygulama içi satın alma ile reklamları kaldırabilirsiniz.' },
+    c5: { title: 'Sorumluluk Sınırlaması', text: 'Tile Rush, açık veya zımni hiçbir garanti verilmeksizin "olduğu gibi" sunulmaktadır. Geliştirici, veri kaybı veya cihaz sorunları dahil olmak üzere oyunun kullanımından veya kullanılamamasından kaynaklanan doğrudan, dolaylı veya sonuçsal zararlardan sorumlu değildir.' },
+    c6: { title: 'Koşullardaki Değişiklikler', text: 'Bu koşulları önceden bildirimde bulunmaksızın istediğimiz zaman güncelleme veya değiştirme hakkını saklı tutarız. Önemli değişiklikleri uygulama veya web sitemiz aracılığıyla kullanıcılara bildireceğiz. Değişikliklerden sonra Tile Rush\'ı kullanmaya devam etmeniz yeni koşulları kabul ettiğiniz anlamına gelir.' },
+    contact: { title: 'İletişim', text: 'Bu koşullar hakkında sorularınız veya endişeleriniz mi var?' },
+    navPrivacy: '← Gizlilik Politikası',
+    navHome: 'Ana Sayfa →'
   }
-  const saved = localStorage.getItem('lang') || (navigator.language.startsWith('tr') ? 'tr' : 'en');
-  setLang(saved);
+};
+
+function setLang(lang) {
+  const d = content[lang];
+  document.getElementById('subtitle').textContent = d.subtitle;
+  for (let i = 1; i <= 6; i++) {
+    document.getElementById('c'+i+'-title').textContent = d['c'+i].title;
+    document.getElementById('c'+i+'-text').textContent = d['c'+i].text;
+  }
+  document.getElementById('contact-title').textContent = d.contact.title;
+  document.getElementById('contact-text').textContent = d.contact.text;
+  document.getElementById('nav-privacy').textContent = d.navPrivacy;
+  document.getElementById('nav-home').textContent = d.navHome;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+  localStorage.setItem('lang', lang);
+}
+
+const saved = localStorage.getItem('lang') || (navigator.language.startsWith('tr') ? 'tr' : 'en');
+setLang(saved);
+document.body.style.visibility = 'visible';
 </script>
 </body>
 </html>
