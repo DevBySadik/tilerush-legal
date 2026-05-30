@@ -1,9 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><title>Tile Rush - Legal</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Rush - Legal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #080C18; color: #E2E8F0; min-height: 100vh; display: flex; flex-direction: column; }
+  .header { background: linear-gradient(135deg, #6366F1, #EC4899); padding: 60px 20px; text-align: center; }
+  .logo { font-size: 52px; font-weight: 900; color: white; letter-spacing: 6px; text-shadow: 0 0 40px rgba(99,102,241,0.9); }
+  .logo span { font-size: 48px; margin-right: 10px; }
+  .tagline { color: rgba(255,255,255,0.75); font-size: 13px; margin-top: 10px; letter-spacing: 3px; }
+  .container { max-width: 600px; margin: 0 auto; padding: 50px 20px; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; }
+  .section-title { color: #475569; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 5px; align-self: flex-start; }
+  .card { width: 100%; background: #141E30; border: 1px solid #1E293B; border-radius: 20px; padding: 28px; display: flex; align-items: center; gap: 20px; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+  .card:hover { border-color: #6366F1; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(99,102,241,0.2); }
+  .card.terms:hover { border-color: #EC4899; box-shadow: 0 8px 30px rgba(236,72,153,0.2); }
+  .icon { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+  .icon.privacy { background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(99,102,241,0.05)); border: 1px solid rgba(99,102,241,0.4); }
+  .icon.terms { background: linear-gradient(135deg, rgba(236,72,153,0.25), rgba(236,72,153,0.05)); border: 1px solid rgba(236,72,153,0.4); }
+  .card-text h3 { font-size: 17px; font-weight: 800; color: #E2E8F0; margin-bottom: 4px; letter-spacing: 0.5px; }
+  .card-text p { font-size: 13px; color: #475569; }
+  .privacy h3 { color: #818CF8; }
+  .terms h3 { color: #F472B6; }
+  .arrow { margin-left: auto; color: #475569; font-size: 18px; flex-shrink: 0; }
+  .badge { background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(236,72,153,0.10)); border: 1px solid rgba(99,102,241,0.25); border-radius: 16px; padding: 16px 24px; text-align: center; width: 100%; margin-top: 10px; }
+  .badge p { color: #475569; font-size: 12px; line-height: 1.8; }
+  .badge a { color: #818CF8; text-decoration: none; }
+  .footer { text-align: center; padding: 24px; color: #475569; font-size: 11px; border-top: 1px solid #1E293B; letter-spacing: 1px; }
+</style>
+</head>
 <body>
-<h1>Tile Rush</h1>
-<a href="privacy-policy.html">Privacy Policy</a><br>
-<a href="terms-of-service.html">Terms of Service</a>
+<div class="header">
+  <div class="logo"><span>🧩</span>TILE RUSH</div>
+  <div class="tagline">LEGAL INFORMATION</div>
+</div>
+
+<div class="container">
+  <p class="section-title">Documents</p>
+
+  <a href="privacy-policy.html" class="card">
+    <div class="icon privacy">🔒</div>
+    <div class="card-text privacy">
+      <h3>Privacy Policy</h3>
+      <p>How we handle your data and privacy</p>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <a href="terms-of-service.html" class="card terms">
+    <div class="icon terms">📋</div>
+    <div class="card-text terms">
+      <h3>Terms of Service</h3>
+      <p>Rules and conditions for using Tile Rush</p>
+    </div>
+    <div class="arrow">›</div>
+  </a>
+
+  <div class="badge">
+    <p>Questions? Contact us at<br>
+    <a href="mailto:devbysadik@gmail.com">devbysadik@gmail.com</a></p>
+  </div>
+</div>
+
+<div class="footer">© 2026 TILE RUSH · DEVBYSADIK · ALL RIGHTS RESERVED</div>
 </body>
 </html>
