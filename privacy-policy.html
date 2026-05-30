@@ -8,15 +8,17 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', Arial, sans-serif; background: #080C18; color: #E2E8F0; min-height: 100vh; }
   .header { background: linear-gradient(135deg, #6366F1, #EC4899); padding: 40px 20px; text-align: center; }
-  .header .logo { font-size: 42px; font-weight: 900; color: white; letter-spacing: 4px; text-shadow: 0 0 30px rgba(99,102,241,0.8); }
-  .header .subtitle { color: rgba(255,255,255,0.8); font-size: 14px; margin-top: 8px; letter-spacing: 2px; }
+  .logo { font-size: 42px; font-weight: 900; color: white; letter-spacing: 4px; text-shadow: 0 0 30px rgba(99,102,241,0.8); }
+  .subtitle { color: rgba(255,255,255,0.8); font-size: 14px; margin-top: 8px; letter-spacing: 2px; }
+  .lang-switch { display: flex; justify-content: center; gap: 10px; margin-top: 16px; }
+  .lang-btn { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 6px 18px; border-radius: 20px; cursor: pointer; font-size: 12px; font-weight: 700; letter-spacing: 1px; transition: all 0.2s; }
+  .lang-btn.active { background: white; color: #6366F1; }
   .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
   .card { background: #141E30; border: 1px solid #1E293B; border-radius: 16px; padding: 30px; margin-bottom: 20px; }
   .card h2 { color: #6366F1; font-size: 16px; letter-spacing: 1px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
   .card h2::before { content: ''; display: inline-block; width: 4px; height: 18px; background: linear-gradient(#6366F1, #EC4899); border-radius: 2px; }
   .card p { color: #94A3B8; line-height: 1.8; font-size: 14px; }
   .card ul { color: #94A3B8; line-height: 2; font-size: 14px; padding-left: 20px; }
-  .card ul li { margin-bottom: 4px; }
   .card ul li strong { color: #E2E8F0; }
   .date { text-align: center; color: #475569; font-size: 12px; margin-bottom: 30px; letter-spacing: 1px; }
   .contact-card { background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(236,72,153,0.05)); border: 1px solid rgba(99,102,241,0.3); border-radius: 16px; padding: 30px; text-align: center; }
@@ -24,51 +26,28 @@
   .contact-card a { color: #818CF8; text-decoration: none; font-size: 15px; }
   .footer { text-align: center; padding: 30px; color: #475569; font-size: 12px; border-top: 1px solid #1E293B; margin-top: 20px; }
   .nav { text-align: center; margin-top: 30px; }
-  .nav a { color: #6366F1; text-decoration: none; font-size: 13px; border: 1px solid rgba(99,102,241,0.4); padding: 8px 20px; border-radius: 20px; }
+  .nav a { color: #6366F1; text-decoration: none; font-size: 13px; border: 1px solid rgba(99,102,241,0.4); padding: 8px 20px; border-radius: 20px; margin: 0 8px; }
+  [data-en], [data-tr] { display: none; }
 </style>
 </head>
 <body>
 <div class="header">
   <div class="logo">🧩 TILE RUSH</div>
-  <div class="subtitle">PRIVACY POLICY</div>
+  <div class="subtitle" data-en>PRIVACY POLICY</div>
+  <div class="subtitle" data-tr>GİZLİLİK POLİTİKASI</div>
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('tr')">TR</button>
+  </div>
 </div>
+
 <div class="container">
-  <p class="date">Last updated: May 30, 2026</p>
+  <p class="date">Last updated / Son güncelleme: May 30, 2026</p>
 
   <div class="card">
-    <h2>Information We Collect</h2>
-    <p>Tile Rush does not collect any personal information directly. However, we use third-party services that may collect data:</p>
-    <ul>
-      <li><strong>Google AdMob</strong> — for displaying advertisements</li>
-      <li><strong>Google Play Games</strong> — for leaderboards and achievements</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>How We Use Information</h2>
-    <p>Information collected by third-party services is used solely to display relevant advertisements and provide game services. We do not sell or share your data with any other parties.</p>
-  </div>
-
-  <div class="card">
-    <h2>Advertising</h2>
-    <p>We use Google AdMob to serve ads. AdMob may use your device's advertising ID to show personalized ads. You can opt out in your device settings under Google → Ads.</p>
-  </div>
-
-  <div class="card">
-    <h2>Children's Privacy</h2>
-    <p>Tile Rush is suitable for all ages. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
-  </div>
-
-  <div class="contact-card">
-    <h2>Contact Us</h2>
-    <p style="color:#94A3B8; margin-bottom:10px; font-size:14px;">Questions about this privacy policy?</p>
-    <a href="mailto:devbysadik@gmail.com">sadiksiyak@gmail.com</a>
-  </div>
-
-  <div class="nav">
-    <a href="terms-of-service.html">Terms of Service →</a>
-  </div>
-</div>
-<div class="footer">© 2026 Tile Rush · DevBySadik · All rights reserved</div>
-</body>
-</html>
+    <h2 data-en>Information We Collect</h2>
+    <h2 data-tr>Topladığımız Bilgiler</h2>
+    <p data-en>Tile Rush does not collect any personal information directly. However, we use third-party services that may collect data:</p>
+    <p data-tr>Tile Rush doğrudan kişisel bilgi toplamaz. Ancak veri toplayabilecek üçüncü taraf hizmetler kullanıyoruz:</p>
+    <ul style="margin-top:10px">
+      <li><strong>Google AdMob</strong> — <span data-en>for displaying ad
