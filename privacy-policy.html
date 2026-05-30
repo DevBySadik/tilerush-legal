@@ -50,4 +50,59 @@
     <p data-en>Tile Rush does not collect any personal information directly. However, we use third-party services that may collect data:</p>
     <p data-tr>Tile Rush doğrudan kişisel bilgi toplamaz. Ancak veri toplayabilecek üçüncü taraf hizmetler kullanıyoruz:</p>
     <ul style="margin-top:10px">
-      <li><strong>Google AdMob</strong> — <span data-en>for displaying ad
+      <li><strong>Google AdMob</strong> — <span data-en>for displaying advertisements</span><span data-tr>reklam gösterimi için</span></li>
+      <li><strong>Google Play Games</strong> — <span data-en>for leaderboards and achievements</span><span data-tr>sıralama tabloları ve başarımlar için</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2 data-en>How We Use Information</h2>
+    <h2 data-tr>Bilgileri Nasıl Kullanıyoruz</h2>
+    <p data-en>Information collected by third-party services is used solely to display relevant advertisements and provide game services. We do not sell or share your data with any other parties.</p>
+    <p data-tr>Üçüncü taraf hizmetlerin topladığı bilgiler yalnızca ilgili reklamları göstermek ve oyun hizmetleri sunmak için kullanılır. Verilerinizi başka taraflarla satmıyor veya paylaşmıyoruz.</p>
+  </div>
+
+  <div class="card">
+    <h2 data-en>Advertising</h2>
+    <h2 data-tr>Reklamcılık</h2>
+    <p data-en>We use Google AdMob to serve ads. AdMob may use your device's advertising ID to show personalized ads. You can opt out in your device settings under Google → Ads.</p>
+    <p data-tr>Reklam sunmak için Google AdMob kullanıyoruz. AdMob, kişiselleştirilmiş reklamlar göstermek için cihazınızın reklam kimliğini kullanabilir. Cihaz ayarlarınızdan Google → Reklamlar bölümünden devre dışı bırakabilirsiniz.</p>
+  </div>
+
+  <div class="card">
+    <h2 data-en>Children's Privacy</h2>
+    <h2 data-tr>Çocukların Gizliliği</h2>
+    <p data-en>Tile Rush is suitable for all ages. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
+    <p data-tr>Tile Rush her yaşa uygundur. 13 yaşın altındaki çocuklardan bilerek kişisel bilgi toplamıyoruz. Böyle bir durum olduğunu düşünüyorsanız lütfen derhal bizimle iletişime geçin.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2 data-en>Contact Us</h2>
+    <h2 data-tr>İletişim</h2>
+    <p style="color:#94A3B8; margin-bottom:10px; font-size:14px;" data-en>Questions about this privacy policy?</p>
+    <p style="color:#94A3B8; margin-bottom:10px; font-size:14px;" data-tr>Gizlilik politikası hakkında sorularınız mı var?</p>
+    <a href="mailto:sadiksiyak@gmail.com">sadiksiyak@gmail.com</a>
+  </div>
+
+  <div class="nav">
+    <a href="index.html" data-en>← Home</a>
+    <a href="index.html" data-tr>← Ana Sayfa</a>
+    <a href="terms-of-service.html" data-en>Terms of Service →</a>
+    <a href="terms-of-service.html" data-tr>Kullanım Koşulları →</a>
+  </div>
+</div>
+
+<div class="footer">© 2026 TILE RUSH · DEVBYSADIK · ALL RIGHTS RESERVED</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-en]').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+    document.querySelectorAll('[data-tr]').forEach(el => el.style.display = lang === 'tr' ? '' : 'none');
+    document.querySelectorAll('.lang-btn').forEach((btn, i) => btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'tr')));
+    localStorage.setItem('lang', lang);
+  }
+  const saved = localStorage.getItem('lang') || (navigator.language.startsWith('tr') ? 'tr' : 'en');
+  setLang(saved);
+</script>
+</body>
+</html>
